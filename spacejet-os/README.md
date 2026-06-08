@@ -22,7 +22,7 @@ Bare-metal ARM satellite OS — runs on real hardware or QEMU.
 ```bash
 # In Termux:
 pkg install arm-none-eabi-binutils
-# (or arm-none-eabi-gcc — whichever your distro provides)
+# Or get QEMU from somewhere else depending what platform your on:
 
 make          # compile everything
 make qemu     # run in QEMU (Ctrl+A then X to exit)
@@ -43,11 +43,3 @@ make clean    # remove build artefacts
 | `ticks`    | Raw timer tick count                |
 | `version`  | Firmware version string             |
 | `reboot`   | Soft-reset (jumps to 0x00000000)    |
-
-## Next Steps
-
-- Add real sensor drivers (I2C, SPI) for STM32 or similar
-- Add preemptive scheduler with SP804 IRQ context switch
-- Add CCSDS packet framing for real ground-link protocol
-- Add watchdog timer task
-- Port to STM32F4 (Cortex-M4) for real hardware
