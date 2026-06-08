@@ -1,0 +1,3 @@
+setup_spacejet.sh
+spacejet-os/patch_spacejet.sh
+spacejet-os/stm32_port.sh
